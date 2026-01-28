@@ -6,11 +6,88 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 16px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Regular.woff2') format('woff2'),
+        url('./fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-h1 {
-    color: blue;
+@font-face {
+    font-family: 'Roboto-light';
+    src: url('./fonts/Roboto-Light.woff2') format('woff2'),
+        url('./fonts/Roboto-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto-bold';
+    src: url('./fonts/Roboto-Medium.woff2') format('woff2'),
+        url('./fonts/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Roboto', 'Segoe UI', Verdana, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.sidebar {
+    color: white;
+    padding: 1em;
+    grid-column: 1 / 2;
+    background-color: #1C94D3;
+    font-size: 1.5rem;
+    font-family: 'Roboto-bold';
+    height: 100vh;
+
+    display: grid;
+    gap: 50px;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.hero, .nav div, .tools div{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.heading{
+    font-size: 1.5em;
+}
+
+.dash-icon {
+   fill: white;
+   width: 4em;
+   height: 4em;
+}
+
+.sidebar .nav,.sidebar .tools {
+    display: grid;
+    margin-left: 1em;
+}
+
+.nav div, .tools div {
+    height: 2em;
+}
+
+.nav div svg, .tools div svg{
+    fill: white;
+    width: 1em;
+    height: 1em;
+}
+
+.main-content {
+    grid-column: 2;
 }
