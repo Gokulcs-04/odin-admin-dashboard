@@ -333,7 +333,7 @@ html {
     background-color: white;
     border-radius: 0.5em;
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
-    padding: 2em;
+    padding: 1.5em;
     margin-top: 1em;
 
     display: grid;
@@ -345,7 +345,7 @@ html {
         display: grid;
         align-items: center;
         grid-template-columns: 1fr 2fr;
-        gap: 0.5em;
+        gap: 1em;
 
         .pfp {
             width: 4em;
